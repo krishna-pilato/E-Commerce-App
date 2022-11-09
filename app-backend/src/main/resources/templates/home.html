@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Back-end Service</title>
+<!-- CSS only -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<!-- JavaScript Bundle with Popper -->
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+	type="text/javascript"></script>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.section-one {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+		url(https://picsum.photos/1920/1080);
+	background-size: cover;
+	background-position: center;
+	filter: brightness();
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	text-align: center;
+	color: white;
+}
+
+h1 {
+	letter-spacing: 5px;
+	font-size: 3.2rem;
+	font-weight: 500;
+}
+
+p {
+	font-size: 1.15rem;
+	letter-spacing: 3px;
+	margin: 20px 0 40px;
+}
+
+.home-button {
+	user-select: none;
+	-webkit-user-drag: none;
+	color: white;
+	text-decoration: none;
+	border: 2px white solid;
+	padding: 10px 20px;
+	border-radius: 45px;
+}
+
+.home-button:hover {
+	border: 5px solid white;
+	font-size: 20px;
+	color: white;
+	transition: font-weight 0.6s linear;
+	transition: border-width 0.6s linear;
+	transition: font-size 0.6s;
+	font-weight: 500;
+}
+
+.home-button:not(:hover) {
+	border: 1px solid white;
+	transition: border-width 0.5s linear;
+	font-weight: 100;
+	font-size: 15px;
+	transition: font-weight 0.6s linear;
+	transition: font-size 0.5s;
+}
+
+.section-two {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.container-two {
+	display: flex;
+	padding: 70px;
+	gap: 20px;
+	width: 100%;
+}
+
+.content h1 {
+	font-size: 2.75rem;
+}
+
+.content h1::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 5px;
+	background: #D1A370;
+}
+
+.content p {
+	font-size: 1.1rem;
+	letter-spacing: 2px;
+}
+
+.content-image img {
+	width: 300px;
+	object-fit: scale-down;
+}
+
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+@media ( max-width : 700px) {
+	.section-two {
+		height: 100%;
+	}
+	.container-two {
+		font-size: 5px;
+		flex-direction: column;
+		height: 100%;
+	}
+}
+</style>
+</head>
+<body class="noselect">
+	<section class="section-one">
+		<div class="container">
+			<h1 class="animate__animated animate__bounce">
+				You're trying to access to a reserved page <br>
+			</h1>
+			<br>
+			<p>Click button to return to our ecommerce</p>
+			<a href="http://localhost:4200/login" target="_blank"
+				class="home-button">See our website&nbsp;&nbsp;<i
+				class="bi bi-arrow-right"></i></a>
+		</div>
+	</section>
+</body>
+</html>

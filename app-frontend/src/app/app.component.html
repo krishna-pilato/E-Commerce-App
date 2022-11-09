@@ -1,0 +1,65 @@
+<!-- Navbar Content Section -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark noselect">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="{{generalIcon}}" width="30px" height="30px" alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-md-auto gap-2">
+        <li class="nav-item rounded">
+          <a class="nav-link active" aria-current="page" href="#"><i class="fas
+              fa-home"></i>&nbsp;&nbsp;Home</a>
+        </li>
+        <li class="nav-item rounded">
+          <a class="nav-link" href="#"><i class="fas fa-user-friends"></i>&nbsp;&nbsp;About</a>
+        </li>
+        <li class="nav-item rounded">
+          <a class="nav-link" href="#"><i class="fas fa-phone"></i>&nbsp;&nbsp;Contact</a>
+        </li>
+        <li class="nav-item rounded">
+          <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Cart</a>
+        </li>
+        <li class="nav-item dropdown rounded">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+            role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+              class="fas fa-user"></i>&nbsp;&nbsp;Profile</a>
+          <ul class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Account</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
+        </li>
+        <li class="nav-item rounded">
+          <form class="d-flex" role="search">
+            <input maxlength="20" class="form-control me-2 navbar-search-bar"
+              type="text" placeholder="Search" aria-label="Search">
+            <button style="border: 1px solid white; border-radius: 5px;"
+              class="btn btn-dark navbar-search-bar-button" type="submit"><i
+                class="fas fa-search"></i></button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content Section -->
+
+<div class="vh-100 d-flex justify-content-center align-items-center">
+  <h1>Main Content</h1>
+  <router-outlet></router-outlet>
+</div>
+
+<!-- Footer Content Section -->
+
+<div class="bg-dark text-white">
+  <p class="text-center p-4 m-0">Footer Content</p>
+</div>

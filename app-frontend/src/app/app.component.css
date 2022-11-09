@@ -1,0 +1,25 @@
+.navbar-search-bar:focus {
+  padding-right: 100px;
+  margin-right: 50px;
+  outline: none;
+}
+
+.navbar-search-bar {
+  -webkit-transition: all 0.7s ease 0s;
+  -moz-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
+}
+
+.navbar-search-bar-button:hover {
+    background-color: white;
+    color: #000;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+.navbar-nav .nav-item:hover {
+  background-color: rgba(180, 190, 203, 0.4);
+}
