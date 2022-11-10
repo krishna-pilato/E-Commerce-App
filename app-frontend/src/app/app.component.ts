@@ -11,6 +11,8 @@ export class AppComponent implements OnInit {
   title = environment.title;
   navbarBackgroundColor = environment.navbarBackgroundColor;
   footerBackgroundColor = environment.footerBackgroundColor;
+  dropdownBackground = "dropdown-menu-dark";
+  isLogged = true;
 
   ngOnInit() {
     if (this.navbarBackgroundColor === 'Dark') {
@@ -26,12 +28,14 @@ export class AppComponent implements OnInit {
   }
 
   changeBackground($event: any): void {
-     if (this.navbarBackgroundColor == 'bg-light') {
-       this.navbarBackgroundColor = 'navbar-dark bg-dark';
-       this.footerBackgroundColor = 'bg-dark text-white';
-     } else if (this.navbarBackgroundColor == 'navbar-dark bg-dark') {
-       this.navbarBackgroundColor = 'bg-light';
-       this.footerBackgroundColor = 'bg-light text-dark';
-     }
+    if (this.navbarBackgroundColor == 'bg-light') {
+      this.navbarBackgroundColor = 'navbar-dark bg-dark';
+      this.footerBackgroundColor = 'bg-dark text-white';
+      this.dropdownBackground = 'dropdown-menu-dark';
+    } else if (this.navbarBackgroundColor == 'navbar-dark bg-dark') {
+      this.navbarBackgroundColor = 'bg-light';
+      this.footerBackgroundColor = 'bg-light text-dark';
+      this.dropdownBackground = '';
+    }
   }
 }

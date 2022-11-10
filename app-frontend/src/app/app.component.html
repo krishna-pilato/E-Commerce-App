@@ -1,8 +1,9 @@
 <!-- Navbar Content Section -->
 
-<nav class="navbar navbar-expand-lg {{navbarBackgroundColor}} noselect">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="{{generalIcon}}" width="30px" height="30px" alt=""></a>
+<nav class="navbar navbar-expand-lg {{navbarBackgroundColor}} noselect fixed-top" style="border-bottom-left-radius: 30px;border-bottom-right-radius: 30px;box-shadow: 3px 3px 12px 3px rgba(68, 139, 231, 0.4);">
+  <div class="container-fluid" style="margin-top: 10px;">
+    <a class="navbar-brand" href="#"><img src="{{generalIcon}}" width="30px"
+        height="30px" alt="">&nbsp;&nbsp;{{title}}</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
       data-bs-target="#navbarNav" aria-controls="navbarNav"
       aria-expanded="false" aria-label="Toggle navigation">
@@ -23,28 +24,31 @@
         <li class="nav-item rounded">
           <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Cart</a>
         </li>
-        <li class="nav-item rounded">
-          <a class="nav-link" href="#" (click)="changeBackground($event)"><i class="fas fa-brush"></i>&nbsp;&nbsp;Theme</a>
-        </li>
-        <li class="nav-item dropdown rounded">
+        <li class="nav-item dropdown rounded" *ngIf="isLogged">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
             role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
               class="fas fa-user"></i>&nbsp;&nbsp;Profile</a>
-          <ul class="dropdown-menu dropdown-menu-end"
+          <ul class="dropdown-menu {{dropdownBackground}} dropdown-menu-end"
             aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Account</a></li>
             <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#" (click)="changeBackground($event)">Change theme</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
             <li><a class="dropdown-item" href="#">Logout</a></li>
           </ul>
         </li>
-        <li class="nav-item rounded">
+        <li class="nav-item rounded" *ngIf="isLogged === false">
+          <a class="nav-link" href="#" id="navbarDropdown"
+            role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+              class="fas fa-user"></i>&nbsp;&nbsp;Sign in</a>
+        </li>
+        <li class="nav-item1">
           <form class="d-flex" role="search">
-            <input maxlength="50" class="form-control me-2 navbar-search-bar"
+            <input class="form-control me-2 navbar-search-bar"
               type="text" placeholder="Search" aria-label="Search">
-            <button style="border: 1px solid white; border-radius: 5px;"
+            <button style="border: 1px solid white; border-radius: 15px;"
               class="btn btn-dark navbar-search-bar-button" type="button"><i
                 class="fas fa-search"></i></button>
           </form>
@@ -53,9 +57,11 @@
     </div>
   </div>
 </nav>
+
 <!-- Main Content Section -->
 
-<div class="vh-100 d-flex justify-content-center align-items-center">
+<div class="vh-100 d-flex justify-content-center align-items-center
+  bg-secondary">
   <h1>Main Content</h1>
   <router-outlet></router-outlet>
 </div>

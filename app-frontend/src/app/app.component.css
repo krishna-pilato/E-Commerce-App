@@ -12,14 +12,20 @@
 }
 
 .navbar-search-bar-button:hover {
-    background-color: rgba(68, 139, 231, 0.4);;
-    color: #fff;
-}
-
-body {
-  font-family: Montserrat, sans-serif;
+  background-color: rgba(68, 139, 231, 0.4);
+  color: #fff;
 }
 
 .navbar-nav .nav-item:hover {
   background-color: rgba(68, 139, 231, 0.4);
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
+  .nav-item {
+    margin-top: 5px;
+  }
 }
