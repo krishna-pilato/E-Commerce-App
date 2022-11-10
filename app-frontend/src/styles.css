@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+* {
+  border: 1px solid red;
+}
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Verdana; }
+body { margin: 0; font-family: Verdana;}
 
 textarea:hover, 
 input:hover, 
