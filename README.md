@@ -13,6 +13,8 @@ The project started on November 9, 2022 with the aim of practicing a rather comp
 
 ![alt text](https://github.com/krishna-pilato/E-Commerce-App/blob/main/images/frontend%20app%20screenshot%20-%20desktop.png?raw=false)
 
+![alt text](https://github.com/krishna-pilato/E-Commerce-App/blob/main/images/frontend%20app%20screenshot%20-%20mobile.png?raw=false)
+
 **How can I test the project on my computer?**
 
 First you need to install the following software to get started:
