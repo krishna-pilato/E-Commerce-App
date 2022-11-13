@@ -14,7 +14,7 @@
 	<name>ecommerce</name>
 	<description>digital storefront like Amazon or Ebay, but with my own design and code.</description>
 	<properties>
-		<java.version>19</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

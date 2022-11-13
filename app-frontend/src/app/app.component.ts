@@ -11,8 +11,9 @@ export class AppComponent implements OnInit {
   title = environment.title;
   navbarBackgroundColor = environment.navbarBackgroundColor;
   footerBackgroundColor = environment.footerBackgroundColor;
-  dropdownBackground = "dropdown-menu-dark";
+  dropdownBackground = 'dropdown-menu-dark';
   isLogged = true;
+  searchButtonInNavbar = false;
 
   ngOnInit() {
     if (this.navbarBackgroundColor === 'Dark') {
@@ -37,5 +38,13 @@ export class AppComponent implements OnInit {
       this.footerBackgroundColor = 'bg-light text-dark';
       this.dropdownBackground = '';
     }
+  }
+
+  showSearchButtonInNavbar(): void {
+      this.searchButtonInNavbar = true;
+  }
+
+  hideSearchButtonInNavbar(): void {
+    this.searchButtonInNavbar = false;
   }
 }

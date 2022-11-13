@@ -2,32 +2,29 @@
 
 <!-- Navbar Content Section -->
 
-<nav class="navbar navbar-expand-lg {{navbarBackgroundColor}} noselect fixed-top" style="border-bottom-left-radius: 30px;border-bottom-right-radius: 30px;box-shadow: 3px 3px 12px 3px rgba(68, 139, 231, 0.4);">
+<nav class="navbar navbar-expand-lg {{navbarBackgroundColor}} noselect fixed-top" style="border-bottom-left-radius: 40px;border-bottom-right-radius: 40px;box-shadow: 3px 3px 12px 3px rgba(68, 139, 231, 0.4);">
   <div class="container-fluid" style="margin-top: 10px;">
-    <a class="navbar-brand" href="#"><img src="{{generalIcon}}" width="30px"
-        height="30px" alt="">&nbsp;&nbsp;{{title}}</a>
+    <a class="navbar-brand" href="#"><img class="h-8" src="{{generalIcon}}" alt="">&nbsp;&nbsp;{{title}}</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
       data-bs-target="#navbarNav" aria-controls="navbarNav"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-md-auto gap-2">
-        <li class="nav-item rounded">
-          <a class="nav-link active" aria-current="page" href="#"><i class="fas
-              fa-home"></i>&nbsp;&nbsp;Home</a>
+      <ul class="navbar-nav mx-lg-auto">
+        <li class="nav-item1">
+          <form class="d-flex" role="search">
+            <input class="form-control navbar-search-barr" style="width: 100%;border-radius: 15px;"
+              type="text" placeholder="Search any products here" aria-label="Search">
+            <button style="margin-left: 10px;border-radius: 15px;"
+              class="btn btn-primary navbar-search-bar-button" type="button">Search</button>
+          </form>
         </li>
-        <li class="nav-item rounded">
-          <a class="nav-link" href="#"><i class="fas fa-user-friends"></i>&nbsp;&nbsp;About</a>
-        </li>
-        <li class="nav-item rounded">
-          <a class="nav-link" href="#"><i class="fas fa-phone"></i>&nbsp;&nbsp;Contact</a>
-        </li>
-        <li class="nav-item rounded">
-          <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Cart</a>
-        </li>
-        <li class="nav-item dropdown rounded" *ngIf="isLogged">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+      </ul>
+                  <div class="navbar-nav ms-lg-4">
+        <a class="nav-item nav-link" href="#" *ngIf="isLogged === false">Sign in</a>
+        <a class="nav-link" *ngIf="isLogged === true" href="#"><i class="fas fa-shopping-cart"></i> &#160;&#160;Cart</a>
+             <a *ngIf="isLogged === true" class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
             role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
               class="fas fa-user"></i>&nbsp;&nbsp;Profile</a>
           <ul class="dropdown-menu {{dropdownBackground}} dropdown-menu-end"
@@ -40,22 +37,10 @@
             </li>
             <li><a class="dropdown-item" href="#">Logout</a></li>
           </ul>
-        </li>
-        <li class="nav-item rounded" *ngIf="isLogged === false">
-          <a class="nav-link" href="#" id="navbarDropdown"
-            role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
-              class="fas fa-user"></i>&nbsp;&nbsp;Sign in</a>
-        </li>
-        <li class="nav-item1">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2 navbar-search-bar"
-              type="text" placeholder="Search" aria-label="Search">
-            <button style="border: 1px solid white; border-radius: 15px;"
-              class="btn btn-dark navbar-search-bar-button" type="button"><i
-                class="fas fa-search"></i></button>
-          </form>
-        </li>
-      </ul>
+                <a href="#" class="btn btn-secondary w-full w-lg-auto" *ngIf="isLogged === false">
+          Register
+        </a>
+      </div>
     </div>
   </div>
 </nav>

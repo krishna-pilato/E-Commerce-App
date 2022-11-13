@@ -1,19 +1,18 @@
-.navbar-search-bar:focus {
-  padding-right: 100px;
-  margin-right: 50px;
+
+@import url(https://unpkg.com/@webpixels/css@1.0/dist/index.css);
+
+.navbar-search-barr:focus {
+  padding-right: 200px;
   outline: none;
 }
 
-.navbar-search-bar {
-  -webkit-transition: all 0.7s ease 0s;
-  -moz-transition: all 0.7s ease 0s;
-  -o-transition: all 0.7s ease 0s;
-  transition: all 0.7s ease 0s;
-}
 
-.navbar-search-bar-button:hover {
-  background-color: rgba(68, 139, 231, 0.4);
-  color: #fff;
+.navbar-search-barr {
+  -webkit-transition: all 1s ease 0s;
+  -moz-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  transition: all 1s ease 0.01s;
+  width: 100%;
 }
 
 .navbar-nav .nav-item:hover {
@@ -28,4 +27,8 @@
   .nav-item {
     margin-top: 5px;
   }
-}
+} 
+
+/* Webpixels CSS */
+/* Utility and component-centric Design System based on Bootstrap for fast, responsive UI development */
+/* URL: https://github.com/webpixels/css */
